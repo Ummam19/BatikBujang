@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-ivory font-sans text-ink antialiased; }
+  h1, h2, h3, .font-display { font-family: 'Playfair Display', Georgia, serif; }
+  :focus-visible { outline: 2px solid #C59B43; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+}
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-sm { @apply px-3 py-1.5 text-xs; }
+  .btn-primary { @apply bg-gold text-white hover:bg-gold-dark; }
+  .btn-dark { @apply bg-ink text-white hover:bg-zinc-700; }
+  .btn-outline { @apply border border-zinc-300 bg-white text-ink hover:border-gold hover:text-gold-dark; }
+  .btn-danger { @apply bg-danger text-white hover:bg-red-800; }
+  .btn-wa { @apply bg-success text-white hover:bg-green-800; }
+  .btn-ghost { @apply text-zinc-600 hover:bg-gold-soft hover:text-gold-dark; }
+
+  .input { @apply w-full rounded-lg border border-zinc-300 bg-white px-3 py-2.5 text-sm placeholder:text-zinc-400 focus:border-gold focus:outline-none focus:ring-2 focus:ring-gold/30 disabled:bg-zinc-100 disabled:text-zinc-500; }
+  .input-error { @apply border-danger focus:border-danger focus:ring-danger/20; }
+  .label { @apply mb-1.5 block text-sm font-medium text-zinc-800; }
+  .field-error { @apply mt-1 text-xs text-danger; }
+  .field-hint { @apply mt-1 text-xs text-zinc-500; }
+
+  .card { @apply rounded-2xl border border-zinc-200 bg-white shadow-card; }
+  .th { @apply whitespace-nowrap px-4 py-3 text-left text-xs font-semibold text-zinc-500; }
+  .td { @apply px-4 py-3 align-middle text-sm; }
+
+  .chip { @apply rounded-full border border-zinc-300 bg-white px-3.5 py-1.5 text-sm font-medium text-zinc-700 transition-colors hover:border-gold hover:text-gold-dark; }
+  .chip-active { @apply border-gold bg-gold text-white hover:text-white; }
+}
+
+/* Motif kawung emas sebagai tekstur dekoratif */
+.batik-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23C59B43' stroke-width='1.6' opacity='.45'%3E%3Cellipse cx='40' cy='20' rx='10' ry='20'/%3E%3Cellipse cx='40' cy='60' rx='10' ry='20'/%3E%3Cellipse cx='20' cy='40' rx='20' ry='10'/%3E%3Cellipse cx='60' cy='40' rx='20' ry='10'/%3E%3C/g%3E%3Ccircle cx='40' cy='40' r='3' fill='%23C59B43' opacity='.6'/%3E%3C/svg%3E");
+}
+
+/* Cetak nota: hanya #receipt-area yang tampil */
+@media print {
+  body * { visibility: hidden !important; }
+  #receipt-area, #receipt-area * { visibility: visible !important; }
+  #receipt-area { position: fixed !important; left: 0; top: 0; width: 100% !important; max-width: 80mm; margin: 0 !important; padding: 4mm !important; box-shadow: none !important; border: 0 !important; }
+}

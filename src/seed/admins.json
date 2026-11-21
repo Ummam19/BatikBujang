@@ -1,0 +1,16 @@
+[
+  {
+    "id": "adm-owner",
+    "name": "Owner Batik Bujang",
+    "email": "owner@batikbujang.id",
+    "password": "owner12345",
+    "role": "Owner"
+  },
+  {
+    "id": "adm-web",
+    "name": "Pengelola Website",
+    "email": "admin@batikbujang.id",
+    "password": "admin12345",
+    "role": "Pengelola Website"
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "store": {
+    "name": "Batik Bujang",
+    "tagline": "bangga beradat, tampil bergaya",
+    "description": "Kain batik lembaran bermotif khas Riau. Dipilih dengan teliti, dikirim langsung dari pemilik usaha ke tangan Anda.",
+    "address": "Riau, Indonesia (ubah alamat lengkap di Admin > Pengaturan)",
+    "whatsappNumber": "6281234567890",
+    "shopeeUrl": "https://shopee.co.id/batikbujang"
+  },
+  "catalog": {
+    "defaultDimension": "220 x 115 cm",
+    "customSizeNote": "Bisa request ukuran khusus. Harga menyesuaikan jenis bahan dan ukuran.",
+    "poEstimateDays": 14,
+    "lowStockThreshold": 2
+  },
+  "paymentMethods": [
+    { "name": "Tunai", "detail": "Bayar langsung saat bertemu atau ambil di tempat." },
+    { "name": "QRIS", "detail": "Scan QRIS yang dikirim owner lewat WhatsApp." },
+    { "name": "Transfer Bank", "detail": "Nomor rekening dikirim owner setelah pesanan dikonfirmasi." }
+  ],
+  "fabricTypes": [
+    {
+      "name": "Katun Dobby",
+      "basePrice": 320000,
+      "description": "Tenunan dobby bertekstur halus dengan pori-pori kecil. Sejuk, menyerap keringat, dan nyaman untuk acara maupun harian."
+    },
+    {
+      "name": "Katun Satin",
+      "basePrice": 350000,
+      "description": "Permukaan lebih halus dan licin, jatuhnya seperti semi-sutra. Tampil mewah untuk acara resmi."
+    },
+    {
+      "name": "Katun Primisima",
+      "basePrice": 330000,
+      "description": "Katun berkualitas tinggi dengan serat rapat. Halus, adem, dan menyerap warna batik dengan tajam."
+    },
+    {
+      "name": "Katun Prima",
+      "basePrice": 300000,
+      "description": "Katun ringan yang adem dan terjangkau. Pilihan praktis untuk pemakaian sehari-hari."
+    }
+  ],
+  "orderStatuses": [
+    { "value": "Menunggu Pembayaran", "description": "Pesanan dicatat, menunggu pembayaran dari pembeli.", "final": false },
+    { "value": "Pre-Order Diproses", "description": "Motif sedang dalam pengerjaan atau produksi ulang.", "final": false },
+    { "value": "Lunas / Selesai", "description": "Pembayaran lunas dan kain sudah diterima pembeli.", "final": true }
+  ],
+  "publicNav": [
+    { "label": "Beranda", "to": { "path": "/" } },
+    { "label": "Katalog", "to": { "path": "/", "hash": "#katalog" } },
+    { "label": "Cek Pesanan", "to": { "path": "/cek-pesanan" } }
+  ],
+  "howToOrder": [
+    { "title": "Pilih motif dan jenis kain", "text": "Telusuri katalog, lihat status Stok Tersedia atau Pre-Order." },
+    { "title": "Kirim pesan lewat WhatsApp", "text": "Tombol pesan otomatis menyiapkan detail motif, kain, dan ukuran." },
+    { "title": "Konfirmasi dan bayar", "text": "Owner mengonfirmasi stok atau estimasi Pre-Order, lalu Anda memilih metode pembayaran." },
+    { "title": "Kain dikirim atau diproses", "text": "Stok tersedia langsung dikirim. Pre-Order dapat dipantau di halaman Cek Pesanan." }
+  ]
+}
